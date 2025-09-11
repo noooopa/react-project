@@ -1,13 +1,13 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
-const url = "http://localhost:8080/app/emp";
+const url = "http://localhost:8000/app/emp";
 
 export const fetchGetEmployee=createAsyncThunk(
     "fetchGetEmployee",
     async (_,thunkAPI,)=>{
         try{
-            const resp=await axios.get(`${url}`)
+            const resp=await axios.get(`${url}/`)
             return resp.data;
         }catch(e){
             return thunkAPI.rejectWithValue("데이터 로드 실패")
@@ -19,7 +19,7 @@ export const fetchPostEmployee=createAsyncThunk(
     "fetchPostEmployee",
     async (emp,thunkAPI,)=>{
         try{
-            const resp=await axios.post(`${url}`, emp)
+            const resp=await axios.post(`${url}/`, emp)
             // console.log(resp);
             return resp.data;
         }catch(e){
