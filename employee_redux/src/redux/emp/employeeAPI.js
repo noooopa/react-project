@@ -1,7 +1,7 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
-const url = "http://localhost:8000/app/emp";
+const url = "/app/emp";
 
 export const fetchGetEmployee=createAsyncThunk(
     "fetchGetEmployee",
