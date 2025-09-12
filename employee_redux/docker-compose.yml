@@ -1,7 +1,7 @@
 services:
-  # 1. PostgreSQL 데이터베이스 서비스
+  # 1. MONGODB 데이터베이스 서비스
   db:
-    image: postgres:14
+    image: mongodb:14
     container_name: my_postgres_db
     restart: always
     volumes:
